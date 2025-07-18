@@ -82,7 +82,7 @@ function Donation() {
   useEffect(() => {
     const fetchCampaigns = async () => {
       try {
-        const response = await fetch("https://portal-ngo.onrender.com/api/donate/public");
+        const response = await fetch("https://np-backend-nc4i.onrender.com/api/donate/public");
         const data = await response.json();
         if (response.ok) {
           setTimedCampaigns(data.campaigns || []);
@@ -178,7 +178,7 @@ function Donation() {
 
     try {
       const amountInPaise = Math.round(amountInINR * 100);
-      const response = await fetch("https://portal-ngo.onrender.com/api/donate", {
+      const response = await fetch("https://np-backend-nc4i.onrender.com/api/donate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -210,7 +210,7 @@ function Donation() {
         description: `Donation to ${selectedCampaign?.title || "Custom Donation"}`,
         order_id: orderData.orderId,
         handler: async (response) => {
-          const verifyResponse = await fetch("https://portal-ngo.onrender.com/api/donate/verify", {
+          const verifyResponse = await fetch("https://np-backend-nc4i.onrender.com/api/donate/verify", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
