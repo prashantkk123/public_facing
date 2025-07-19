@@ -203,7 +203,7 @@ function Donation() {
       }
 
       const options = {
-        key: "rzp_test_Mitv03aBlFFlQ0",
+        key: "rzp_live_Yhymc5JsSanVOF",
         amount: orderData.amount,
         currency: "INR",
         name: "NayePankh",
