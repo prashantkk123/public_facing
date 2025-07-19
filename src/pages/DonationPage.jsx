@@ -203,7 +203,7 @@ function Donation() {
       }
 
       const options = {
-        key: "rzp_live_QxJ9aleQ3ELc2N",
+        key: process.env.RAZORPAY_TEST_KEY_ID,
         amount: orderData.amount,
         currency: "INR",
         name: "NayePankh",
